@@ -1,0 +1,12 @@
+builds:
+- main: main.go
+  id: "fig"
+  binary: fig
+  ldflags:
+  - -s -w -X main.version={{.Version}} -X main.build={{.Commit}}
+  goos:
+  - linux
+  - darwin
+  goarch:
+  - amd64
+  - arm64
